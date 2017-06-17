@@ -10,8 +10,10 @@ class Bottles
     @song.verse number
   end
 
-  def verses *numbers
-    @song.verses numbers
+  def verses first, last
+    @song.verses first, last
   end
 
 end
+
+puts Bottles.new.verses(1, 0)

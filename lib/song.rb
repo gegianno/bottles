@@ -13,10 +13,11 @@ class Song
     @verses[number].to_s
   end
 
-  def verses *numbers
+  def verses first, last
     verses = ""
-    numbers.first.each_with_index do |number, index|
-      verses += verse(number) + (numbers.first.size - 1 == index ? "" : "\n")
+    verse_numbers = first > last ? (first.downto(last).to_a) : (numbers.first.first..numbers.first.last)
+    verse_numbers.each_with_index do |number, index|
+      verses += verse(number) + (verse_numbers.size - 1 == index ? "" : "\n")
     end
     return verses
   end
