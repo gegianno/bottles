@@ -10,4 +10,8 @@ class Bottles
     @song.verse number
   end
 
+  def verses *numbers
+    @song.verses numbers
+  end
+
 end
