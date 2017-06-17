@@ -22,4 +22,8 @@ class Song
     return verses
   end
 
+  def full
+    verses @verses.size-1, 0
+  end
+
 end

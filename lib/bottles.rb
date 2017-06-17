@@ -14,6 +14,8 @@ class Bottles
     @song.verses first, last
   end
 
-end
+  def song
+    @song.full
+  end
 
-puts Bottles.new.verses(1, 0)
+end
