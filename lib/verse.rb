@@ -1,3 +1,5 @@
+require 'active_support/inflector'
+
 class Verse
 
   def initialize number
@@ -23,8 +25,9 @@ Take it down and pass it around, no more bottles of beer on the wall.
   end
 
   def n_verse number
+    bottles = "bottle".pluralize(number - 1)
     "#{number} bottles of beer on the wall, #{number} bottles of beer.
-Take one down and pass it around, #{number - 1} bottles of beer on the wall.
+Take one down and pass it around, #{number - 1} #{bottles} of beer on the wall.
 "
   end
 
