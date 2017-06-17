@@ -10,7 +10,7 @@ class Song
   end
 
   def verse number
-    @verses[number]
+    @verses[number].to_s
   end
 
 end

@@ -7,7 +7,7 @@ class Bottles
   end
 
   def verse number
-    puts @song.verse number
+    @song.verse number
   end
 
 end
